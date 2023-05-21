@@ -1,12 +1,16 @@
 import { assertType } from "type-plus";
 
-type User = {};
+type Email = `${string}@${string}`;
+
+type User = {
+  id: string;
+  email: Email;
+  name: string;
+  age?: number;
+};
 
 type UserOptions = {
-  id: string;
-  email: string;
-  name: string;
-  age: number;
+  // has all fields optional and the email has no shape constraints
 };
 
 const createUser = (options: UserOptions): User => {

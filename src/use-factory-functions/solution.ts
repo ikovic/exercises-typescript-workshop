@@ -6,7 +6,7 @@ type User = {
   id: string;
   email: Email;
   name: string;
-  age: number;
+  age?: number;
 };
 
 type UserOptions = Partial<
@@ -23,7 +23,6 @@ const createUser = (options: UserOptions): User => {
   if (!options.id || typeof options.id != "string")
     throw new Error("id is required");
   if (typeof options.name != "string") throw new Error("name is required");
-  if (typeof options.age != "number") throw new Error("age is required");
 
   if (typeof options.email != "string" || !options.email.includes("@"))
     throw new Error("email is invalid");
