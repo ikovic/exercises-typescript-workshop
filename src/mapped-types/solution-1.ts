@@ -7,7 +7,7 @@ type Price = {
 
 type ProductNames = "bag" | "shirt";
 
-// #2 Use a Mapped type
+// #1 Use a Mapped type
 type Products = {
   [name in ProductNames]: Price;
 };

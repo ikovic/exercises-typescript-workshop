@@ -7,7 +7,7 @@ type Price = {
 
 type ProductNames = "bag" | "shirt";
 
-// #1 Use a Record type
+// #2 Use a Record type
 type Products = Record<ProductNames, Price>;
 
 const validProducts: Products = {
